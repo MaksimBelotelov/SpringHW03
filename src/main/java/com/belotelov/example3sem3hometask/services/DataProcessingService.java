@@ -2,7 +2,6 @@ package com.belotelov.example3sem3hometask.services;
 
 import com.belotelov.example3sem3hometask.domain.User;
 import com.belotelov.example3sem3hometask.repository.UserRepository;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
@@ -41,6 +40,6 @@ public class DataProcessingService {
     }
 
     public void addUserToList(User user) {
-        repository.getUsers().add(user);
+        repository.save(user);
     }
 }
